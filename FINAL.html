@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+ <!-- Include FontAwesome library -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ <style>
+body{
+    background-color: #fde8b7;
+    margin: 0;
+        padding: 0;
+}
+ /* navigation styles */
+.topnav {
+overflow: hidden;
+background-color: #4F4033;
+display: flex;
+justify-content: right; /* Align items to start and end */
+align-items: center; /* Center items vertically */
+padding: 20px 20px;
+}
+
+.topnav a {
+color: #ddd;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 20px;
+background-color: #4F4033;
+transition: 1s;
+}
+
+.topnav h2 {
+margin: 0;
+padding: 14px 16px;
+color: #f2f2f2;
+}
+
+.topnav a:hover {
+background-color: #aa7a50;
+color: #ddd;
+z-index: 2;
+}
+
+.topnav a.active {
+background-color: #04AA6D;
+color: white;
+}
+
+.topnav .icon {
+display: none;
+}
+h1{
+
+color: black;
+font-size: 50px;
+font-weight: bold;
+text-align:center;
+
+}
+
+/* Header styles */
+.header {
+              background-image: url("imagess/pic\ nako.jpg");
+              /* Replace with your image URL */
+              background-size: cover;
+              background-position: center;
+              height: 600px;
+              /* Adjust the height as needed */
+              padding: 80px 20px;
+              text-align: center;
+              color: white;
+              /* Ensure text is readable on the background */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+          }
+  
+          .header h1 {
+              font-size: 100px;
+              margin-bottom: 20px;
+              animation: slideInDown 1s ease-out;
+              /* Custom animation for heading */
+          }
+  
+          .header p {
+              font-size: 18px;
+              color: #ccc;
+              animation: fadeIn 1s ease-out 0.5s forwards;
+              /* Custom animation for paragraph */
+          }
+
+/* Card Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.1s ease;
+    color:#aa7a50;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    color:#512a0c;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 20px;
+}
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+.card-description {
+    font-size: 1em;
+    margin-bottom: 16px;
+}
+.read-more-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #aa7a50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.read-more-btn:hover {
+    background-color: #512a0c;
+}
+#proj{   
+    color:#aa7a50;
+    background-size: 500px;
+    position: relative;
+}
+  /* Container with Image and Information */
+  .container {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.container img {
+    width: 50%;
+    height: auto;
+}
+.container-info {
+    width: 50%;
+    padding: 0 20px;
+}
+.container-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.container-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Footer Styles */
+footer {
+background-color: #4F4033;
+color: white;
+text-align: center;
+padding: 20px 0;
+margin-top: 40px;
+animation: fadeInFooter 2s ease-in;
+}
+
+footer p {
+margin: 5px 0;
+}
+
+footer p a {
+color: #fff;
+text-decoration: none;
+margin: 0 10px;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer p a:hover {
+color: #aa7a50;
+transform: scale(1.1);
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+        .card {
+            width: calc(100% - 20px);
+        }
+    }
+    @media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {
+display: none;
+}
+.topnav a:first-child {
+display: none; /* Hide the Home navigation link */
+}
+.topnav a.icon {
+float: right;
+display: block;
+}
+}
+
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+position: absolute;
+right: 0;
+top: 0;
+}
+.topnav.responsive a {
+float: none;
+display: block;
+text-align: left;
+}
+}
+
+/* Animation Keyframes */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+   <!-- Navigation Bar -->
+<div class="topnav" id="myTopnav">
+    <div>
+        <a href="#home">Home</a>
+        <a href="#container">Background</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contacts</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        &#9776; <!-- Hamburger icon -->
+    </a>
+</div>
+    <!-- Header -->
+    <div class="header" id="home">
+        <h1 style="font-size: 100px; margin-bottom: 20px; color:white; animation:  slideInDown 1.5s ease-out, fadeInHeader 2.0s ease-out;">Hi, I am <br>Jumeirah Joy A. Bayotas.</h1>
+        <h3 style="font-size: 18px; color: #ccc;">An aspiring BSIT 1G Student in Davao del Norte State College from Sto. Tomas Davao del Norte</h3>
+    </div>
+
+<p style="background-color:#937257; color:#937257">-</p>
+<!-- Container with Image and Information -->
+<div class="container" id="container">
+    <img src="pic nako.jpg" alt="Sample Image" >
+    <div class="container-info">
+        <h2 style="color:#4F4033">About Me</h2>
+        <p style="color:#4F4033">Hey there! Hello! I am Jumeirah Joy A. Bayotas, an 18-year-old dedicated to spreading positivity and enjoying life's simple pleasures. 
+            Born on October 17, 2005, I excel in appreciating the small joys in life, whether it's catching up on rest, immersing myself in video games, or spending quality time with loved ones. 
+            With a talent for adapting to various situations and a strong work ethic, I approach challenges with enthusiasm and a positive attitude. 
+            Colleagues and friends often describe me as a beacon of positivity, and I strive to bring that energy to every aspect of my life. 
+           </p>
+           <a class="read-more-btn" href="#contacts">Contact Me</a>
+    </div>
+</div>
+        <p style="background-color:#937257; color:#937257">-</p>
+<h1 style="text-align:left; padding: 0px 50px;" id="proj">Projects</h1>
+    <!-- Card Design -->
+    <div class="card-container" id="projects">
+
+        <div class="card">
+            <img src="1.png" alt="Frosty Fiesta Delight Shop System Logo Image ">
+                <div class="card-content">
+                    <h3 class="card-title">Frosty Fiesta Delight Shop System</h3>
+                    <p class="card-description">Frosty Fiesta Delight was created during our First Semester for our Lab Exam in Computer Programming 1. It is an online store that offers a variety of delicious frozen ice cream designed to satisfy your cravings. The system allows customers to input their desired ice creams and displays the total purchase amount.</p>
+                    <br><br>
+                    <a class="read-more-btn" href="https://drive.google.com/file/d/1L7nqO8Or_iUAqOfYmnnpAjhhVifwHJ8o/view?usp=sharing" target="_blank">Download Project</a>
+                </div>
+            </div>    
+
+            <div class="card">
+                <img src="2.png" alt="Xenuz Banking System Get Started Image">
+                <div class="card-content">
+                    <h3 class="card-title">Xenuz Banking System</h3>
+                    <p class="card-description">The "Xenuz Bank" banking system was created during our Second Semester for our Lab Exam in Computer Programming 2. It is a comprehensive financial platform designed to offer a range of essential services to its users. Functioning as a pivotal hub for monetary transactions, it encompasses features such as deposit, and withdrawal, providing users with seamless access to manage their finances. In addition, it has administration capabilities that handle all the accounts.</p>
+                    <a class="read-more-btn" href="https://drive.google.com/file/d/1aM0KnJynm6OooJEsmlDglZ4mp5HASxNV/view?usp=drive_link" target="_blank">Download Project</a>
+                </div>
+            </div>   
+
+        <div class="card">
+            <img src="3.png" alt="Ancient Trails Website">
+            <div class="card-content">
+                <h3 class="card-title">Ancient Trails Website</h3>
+                <p class="card-description">Ancient Trails was created during our Second Semester for our Lab Exam in Web System and Technology 1. It is a website that offers a curated collection of the most significant discoveries, providing detailed information and stunning visuals of each item. From ancient pharaohs' treasures to well-preserved fossils, Ancient Trails brings the wonders of Egypt's rich history right to your fingertips.</p>
+                <br>
+                <a class="read-more-btn" href="https://drive.google.com/file/d/1aM0KnJynm6OooJEsmlDglZ4mp5HASxNV/view?usp=drive_link" target="_blank">Download Project</a>
+            </div>
+    </div>   
+    </div>
+<!-- Footer -->
+<footer id="contacts">
+    <p style="font-size: large;">For more Info</p>
+    <br>
+    <p style="font-size: large;">Jumeirah Joy A. Bayotas:</p>
+    <br>
+    <p>
+        <a href="https://web.facebook.com/jumeirahmark" class="fa fa-facebook" style="font-size: 1.5em;"></a>
+        <a href="https://x.com/Kura_kawai" class="fa fa-twitter" style="font-size: 1.5em;"></a>
+        <a href="https://www.instagram.com/jumeirah_joy/" class="fa fa-instagram" style="font-size: 1.5em;"></a>
+    </p>
+  </footer>
+
+
+
+    <script>
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  var title = x.getElementsByTagName("h2")[0];
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    title.style.display = "none"; // Hide the title
+    x.style.justifyContent = "center"; // Center align items
+  } else {
+    x.className = "topnav";
+    title.style.display = "block"; // Show the title
+    x.style.justifyContent = "space-between"; // Revert to default alignment
+  }
+}
+
+// Disable right-click
+document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) || (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+
+
+    </script>
+    
+</body>
+</html>
